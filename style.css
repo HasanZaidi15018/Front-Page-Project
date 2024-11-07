@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(197, 187, 187);
+}
+.container{
+    max-width:80vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+.headerContainer{
+    margin: 2.8rem;
+}
+.updateText{
+    margin: 10px;
+    padding:10px 0;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 1px 1px 10px;
+    position:absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    /* animation-name: rightMovement; */
+    /* animation-duration:14s; */
+    /* animation-iteration-count:linear ; */
+    /* animation-timing-function: ease-in-out; */
+    /* animation-delay: 0; */
+    /* animation-direction: alternate-reverse */
+    animation: rightMovement 20s linear 0s infinite;
+    
+}
+@keyframes rightMovement{
+    0%{
+        left:100%;
+    }
+    100%{
+        left:-100%
+    }
+}
+.headerTitle{
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 1px 1px 25px;
+}
+.headerDescription{
+    max-width: 568px;
+    text-align: center;
+    color: rgb(65, 63, 63);
+    margin: 0 auto;
+    font-size: larger;
+}
+.mainContainer{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1,1fr);
+}
+@media(min-width:760px){
+    .mainContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media(min-width:1120px){
+    .mainContainer{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media(min-width:1246px){
+    .mainContainer{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.cardContainer{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(167, 150, 150);
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px;
+    background-color: rgb(247, 234, 234);
+}
+.cardimgContainer{
+    position: relative;
+    overflow: hidden;
+    height: 11rem;
+
+}
+@media (min-width:768px)
+{ 
+    .cardimgContainer{
+        height: 12rem;
+        overflow: hidden;
+        position: relative
+    }
+    
+}
+.img1{
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.cardtitleContainer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+.cardContainer:hover .img1{
+    transform: scale(1.1);
+    transition-duration:200ms;
+}
+.cardTitle{
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(2, 1, 1);
+    line-height: 1.5rem;
+    margin-bottom: 0.3rem;
+}
+.cardtitleAnchor:hover .cardTitle{
+    color:rgb(41, 41, 139);
+}
+.description1{
+    color: rgb(84, 79, 79);
+    font-size: 1rem;
+}
+.cardfooterContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+.authorContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+.authoravatarContainer{
+    height: 2.5rem;
+    width: 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgb(87, 86, 86);
+    border-radius: 50%;
+    background-color: rgb(201, 204, 208);
+}
+.authorinfoContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+.authorName{
+    color: rgb(35, 35, 156);
+}
+.authorDate{
+    color: rgb(116, 106, 106);
+}
+.cardtagContainer{
+    font-size: 0.79rem;
+    border: 1px solid rgb(85, 81, 81);
+    border-radius: 5px;
+    line-height: 1.3rem;
+    padding: 5px;
+    margin:0 0.1rem;
+    color: rgb(116, 106, 106);
+}
+.footerHasan{
+    text-align: center;
+    font-weight: 900;
+    margin: 2rem;
+}
